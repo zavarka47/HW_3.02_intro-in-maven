@@ -1,20 +1,22 @@
 package com.example.hw02.model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Recipe {
 
-    private String title;
+    private String name;
     private int cookingTime;
-    private ArrayList<Ingredient> ingredientList;
+    private Ingredient [] ingredients;
+//   private ArrayList<Ingredient> ingredientList;
     private ArrayList <String> steps;
 
     public String getTitle() {
-        return title;
+        return name;
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        this.name = title;
     }
 
     public int getCookingTime() {
@@ -26,12 +28,12 @@ public class Recipe {
     }
 
     public ArrayList<Ingredient> getIngredientList() {
-        return ingredientList;
+        return (ArrayList<Ingredient>) Arrays.asList(ingredients);
     }
 
-    public void setIngredientList(ArrayList<Ingredient> ingredientList) {
+/*    public void setIngredientList(ArrayList<Ingredient> ingredientList) {
         this.ingredientList = ingredientList;
-    }
+    }*/
 
     public ArrayList<String> getSteps() {
         return steps;
